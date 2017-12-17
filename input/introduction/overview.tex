@@ -1,0 +1,25 @@
+\section{Overview}
+
+\begin{figure}[H] 
+	\centering \includegraphics[scale=1]{images/freecadlogo.png}
+	\caption{FreeCAD's logo}
+	\label{fig:freecadlogo}
+\end{figure}
+
+
+Rebar Addon for FreeCAD is the project that I worked upon for my 6-month training and also as Google Summer of Code project. It is under the umbrella organization of BRL-CAD. FreeCAD is an open-source parametric 3D modeling application, made primarily to design real-life objects. Parametric modeling describes a certain type of modeling, where the shape of the 3D objects you design are controlled by parameters. For example, the shape of a brick might be controlled by three parameters: height, width and length. In FreeCAD, as in other parametric modelers, these parameters are part of the object, and stay modifiable at any time, after the object has been created. Some objects can have other objects as parameters, for example you could have an object that takes our brick as input, and creates a column from it. You could think of a parametric object as a small program that creates geometry from parameters.
+
+FreeCAD is also multiplatform (it runs exactly the same way on Windows, Mac OS and Linux platforms), and open-source. Being open-source, FreeCAD benefits from the contributions and efforts of a large community of programmers, enthusiasts and users worldwide. FreeCAD is essentially an application built by the people who use it, instead of being made by a company trying to sell you a product. And of course, it also means that FreeCAD is free, not only to use, but also to distribute, copy, modify, or even sell.
+
+My project is to create a rebar addon for Arch Workbench of FreeCAD to ease up the process of creating reinforcement in structural element. The main purpose of this project is to enable the user to create reinforcement through an easy and intuitive way.
+
+This project is purely related structural engineering, aimed at easing up the reinforcement process in the FreeCAD. The current rebar functionality in FreeCAD is very limited by its UI and creating a reinforcement system using it is quite tedious. Currently, the user has to create a sketch for the rebar profile and define the required set of constraints. This becomes very time-consuming task even for an expert level user when he/she has a building model with several structural objects. This project is aimed at easing up the process of rebaring in FreeCAD. In this project, list of rebars will be provided to user in the form of dropdown. On selecting a rebar from dropdown, a dialog box will popout with input fields where can provide data related to selected rebar. The entire project will be delivered as a FreeCAD addon. The input fields in the dialog box are further categorised and presented in the form of tabs. User can easily switch to any tab to see contained input fields, thus enriching the experience by keeping the natural flow of user. With successful completion of this project, FreeCAD user will have an easy and professional way to create rebars for their projects with less efforts in less time.
+
+This addon is completely open source (under the LGPLv2+ license) and the entire code is available to the user as and when
+required. There is also Complete developer’s Documentation, User manual and video tutorials alongwith it that helps using it a lot easier.
+
+The core part of this project is implemented using Python and PySide. Github is used to manage code and IRC/Gitter to communicate with the mentors.
+
+My training being not based on particular language or technology, different type of open-source software's and technologies are
+used in this project and many during my training which are not used in this
+project like Django, Facebook's Graph API for\emph{ Love Ludhiana} WebApp.
