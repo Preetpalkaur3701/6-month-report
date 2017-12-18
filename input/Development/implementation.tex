@@ -9,187 +9,79 @@
 
 \textit{makeRebar([baseobj,sketch,diameter,amount,offset,name]):} Adds a reinforcement bar object to the given structural object, using the given sketch as profile.
 
-By following the above approach I can reuse the existing implementation of reinforcement system in the FreeCAD and at the same time proposing something new and interesting which will enrich user experience. Figure \ref{fig:flow}
+By following the above approach I can reuse the existing implementation of reinforcement system in the FreeCAD and at the same time proposing something new and interesting which will enrich user experience.
 
-\begin{figure}
-    \centering \includegraphics[width=\linewidth]{images/RebaraddonDFD.png}
-    \caption{Represenation diagram of data flow from Rebar addon to FreeCAD object}
-    \label{fig:flow}
-\end{figure}
 \end{enumerate}
 
-\section{Activation of Rebar Addon}
-\begin{enumerate}
-\item Open the FreeCAD Addon Manager (Tool \textrightarrow  Addon manager).
-\item When an addon manager will open, select Reinforcement from a list of workbenches shown by an addon manager.
-\item After selecting, click on Install/Update button.
-\item Restart FreeCAD.
-\item Now you will see different rebars in a drop-down list of rebar tools (Arch \textrightarrow Rebar tools \textrightarrow Different rebars).
-\end{enumerate}
-After activation, Rebar Tool is added in the FreeCAD Arch Workbench as shown in Figure \ref{mainFreeCADwindow}
+\section{Web pages in thepoet.me}
+\subsection{Website}
+Figure \ref{straightrebar} is the main landing page of thepoet.me.
 
 \begin{figure}
-    \centering \includegraphics[width=\linewidth]{images/r9b5l7K.jpg}
-    \caption{FreeCAD Window}
-    \label{mainFreeCADwindow}
-\end{figure}
-
-\section{Tools of Rebar Addon}
-\subsection{Creates a Straight reinforcement bar in a selected structural element}
-
-\subsubsection{Description}
-The Straight Rebar tool allows user to create a straight reinforcing bar in the structural element as show in Figure \ref{straightrebar}.
-
-\begin{figure}
-    \centering \includegraphics[scale=0.35]{images/StraightRebar.png}
-    \caption{Straight rebar reinforcement}
+    \centering \includegraphics[scale=0.35]{images/app/poetwebsite-fullpage.png}
+    \caption{Website of thepoet.me}
     \label{straightrebar}
 \end{figure}
 
-\subsubsection{How to use}
-\begin{itemize}
-\item Create a structure element
-\item Select any face of the structure
-\item Then select Arch Rebar Straight Rebar from the rebar tools
-\item A task panel will pop-out on the left side of the screen as shown in Figure \ref{straightrebardialog}.
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/StraightRebarDialog.png}
-    \caption{Dialog box of Straight Rebar}
-    \label{straightrebardialog}
-\end{figure}
-\item Select the desired orientation
-\item Give the inputs like front cover, right side cover, left side cover, bottom cover and diameter of the rebar
-\item Select the mode of distribution either amount or spacing
-\item If spacing is selected, a user can also opt for custom spacing
-\item Pick selected face is used to verify or change the face for rebar distribution
-\item Click OK or Apply to generate the rebars
-\item Click Cancel to exit the task panel
-\end{itemize}
-
-
-\subsection{Creates a UShape reinforcement bar in a selected structural element}
-\subsubsection{Description}
-The UShape Rebar tool allows user to create a UShape reinforcing bar in the structural element as show in Figure \ref{ushaperebar}.
+\subsection{User sign up page}
+In this page Figure \ref{poet2}, user register his/her account in thepoet.me. 
 
 \begin{figure}
-    \centering \includegraphics[scale=0.35]{images/Footing_UShapeRebar.png}
-    \caption{UShape rebar reinforcement}
-    \label{ushaperebar}
-\end{figure}
-\subsubsection{How to use}
-\begin{itemize}
-\item Select UShape Rebar tool from the rebar tools.
-\item A task panel will pop-out on the left side of the screen as shown in Figure \ref{ushaperebardialog}
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/UShapeDialog.png}
-    \caption{Dialog box of UShape Rebar}
-    \label{ushaperebardialog}
-\end{figure}
-\item Click OK or Apply to generate the rebars.
-\end{itemize}
-
-\subsection{Creates a LShape reinforcement bar in a selected structural element}
-\subsubsection{Description}
-The LShape Rebar tool allows user to create LShape reinforcing bar in the structural element as shown in Figure \ref{lshaperebar}.
-\begin{figure}
-    \centering \includegraphics[scale=0.35]{images/LShapeRebarNew.png}
-    \caption{LShape rebar reinforcement}
-    \label{lshaperebar}
-\end{figure}
-\subsubsection{How to use}
-\begin{itemize}
-\item Select LShape Rebar tool from the rebar tools.
-\item A task panel will pop-out on the left side of the screen as shown in Figure \ref{lshaperebardialog}
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/LShapeDialog.png}
-    \caption{Dialog box of LShape Rebar}
-    \label{lshaperebardialog}
-\end{figure}
-\item Click OK or Apply to generate the rebars.
-\end{itemize}
-
-\subsection{Creates a Bent Shape reinforcement bar in a selected structural element}
-\subsubsection{Description}
-The Bent Shape Rebar tool allows user to create a bent shape reinforcing bar in the structural element as shown in Figure \ref{bentshaperebar}.
-\begin{figure}
-    \centering \includegraphics[scale=0.35]{images/BentShapeRebar.png}
-    \caption{Bent Shape rebar reinforcement}
-    \label{bentshaperebar}
-\end{figure}
-\subsubsection{How to use}
-\begin{itemize}
-\item Select Bent Shape Rebar tool from the rebar tools.
-\item A task panel will pop-out on the left side of the screen as shown in Figure \ref{bentshaperebardialog}
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/BentShapeDialog.png}
-    \caption{Dialog box of Bent Shape Rebar}
-    \label{bentshaperebardialog}
-\end{figure}
-\item Click OK or Apply to generate the rebars.
-\end{itemize}
-
-\subsection{Creates a Stirrup reinforcement bar in a selected structural element}
-\subsubsection{Description}
-The Stirrup Rebar tool allows user to create a stirrup reinforcing bar in the structural element as shown in Figure \ref{stirruprebar}.
-\begin{figure}
-    \centering \includegraphics[scale=0.35]{images/Stirrup.png}
-    \caption{Stirrup rebar reinforcement}
-    \label{stirruprebar}
-\end{figure}
-\subsubsection{How to use}
-\begin{itemize}
-\item Select Stirrup Rebar tool from the rebar tools.
-\item A task panel will pop-out on the left side of the screen as shown in Figure \ref{stirruprebardialog}
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/StirrupDialog.png}
-    \caption{Dialog box of Stirrup Rebar}
-    \label{stirrupshaperebardialog}
-\end{figure}
-\item Click OK or Apply to generate the rebars.
-\end{itemize}
-
-\subsection{Creates a Helical reinforcement bar in a selected structural element}
-
-\subsubsection{Description}
-The Helical Rebar tool allows user to create a helical reinforcing bar in the structural element as shown in Figure \ref{helicalshaperebar}.
-\begin{figure}
-    \centering \includegraphics[scale=0.35]{images/HelicalRebar.png}
-    \caption{Helical rebar reinforcement}
-    \label{helicalshaperebar}
-\end{figure}
-\subsubsection{How to use}
-\begin{itemize}
-\item Select Helical Rebar tool from the rebar tools.
-\item A task panel will pop-out on the left side of the screen as shown in Figure \ref{helicalshaperebardialog}
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/HelicalRebarDialog.png}
-    \caption{Dialog box of Helical Rebar}
-    \label{helicalshaperebardialog}
-\end{figure}
-\item Click OK or Apply to generate the rebars.
-\end{itemize}
-
-\subsection{Custom Spacing}
-\subsubsection{Description}
-The Custom Spacing tool allows a user to create rebar distribution in the structural element. You can define three segments for the distribution. For the first and third segments, you can give both a number of rebars and spacing between rebars. But for the second segment, you can only give either a number of rebars or spacing between rebars because one value automatically determines other.
-
-For eg.: Given input values to Rebar Distribuiton dialog as shown in Figure \ref{rebardistributiondialog1}:
-
-\begin{figure}
-    \centering \includegraphics[scale=0.60]{images/RebarDistributionDialog.png}
-    \caption{Dialog box of Rebar Distribution}
-    \label{rebardistributiondialog1}
+    \centering \includegraphics[scale=0.35]{images/app/poetsignup-fullpage.png}
+    \caption{Sign up page}
+    \label{poet2}
 \end{figure}
 
-Output produces by Rebar Distribution dialog when user click on OK button as shown in Figure \ref{rebardistribution1}:
+\subsection{User login page}
+Registered user can open his/her dashboard of thepoet.me. Figure \ref{poet3}
 
 \begin{figure}
-    \centering \includegraphics[scale=0.35]{images/RebarDistribution.png}
-    \caption{Rebar distribution of Stirrup reinforcement}
-    \label{rebardistribution1}
+    \centering \includegraphics[scale=0.35]{images/app/login.png}
+    \caption{Login page}
+    \label{poet3}
 \end{figure}
+
+
+\subsection{User profile page}
+After login, thepoet.me redirect user to his/her profile page. Figure \ref{poet4}
+
+\begin{figure}
+    \centering \includegraphics[scale=0.35]{images/app/poetuserprofile-fullpage.png}
+    \caption{User's profile page}
+    \label{poet4}
+\end{figure}
+
+\subsection{Add book page}
+Here user can add his/her book to its profile. Figure \ref{poet5}
+
+\begin{figure}
+    \centering \includegraphics[scale=0.35]{images/app/poetuseraddbook-fullpage.png}
+    \caption{Add book page}
+    \label{poet5}
+\end{figure}
+
+\subsection{User edit profile page}
+User can also edit his/her profile. Figure \ref{poet6}
+
+\begin{figure}
+    \centering \includegraphics[scale=0.35]{images/app/poetusereditprofile-fullpage.png}
+    \caption{User's edit profile page}
+    \label{poet6}
+\end{figure}
+
+\subsection{Forget password page}
+User can also change his/her password. Figure \ref{poet7}
+
+\begin{figure}
+    \centering \includegraphics[scale=0.35]{images/app/poetuserchangepwd-fullpage.png}
+    \caption{Forget password page}
+    \label{poet7}
+\end{figure}
+
+
 
 %
+
 
 %Customizer  will provide User Interface to Customize Models interactively instead of modifying them manually. It will make the user able to create the templates for given model which can further be customized to cater to their need of different users and also provide a feature to save the set of parameters which define a different model using the same template of the model.
 %\subsection{Activation of Customizer functions}
