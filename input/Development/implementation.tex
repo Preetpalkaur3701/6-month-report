@@ -1,17 +1,22 @@
 \section{Implementation}
+Development of thepoet.me started with development in phases which focus on particular need of project.
+Various phases and their detail are given below:
 
-\begin{enumerate}
-\item Every workbench is nothing more than a folder containing an Init.py and/or InitGui.py. I just need to define FreeCAD commands, that can be made into menu items or toolbar buttons.
+\begin{itemize}
 
-\item The inputs provided by user from rebar dialog box will be passed to our custom rebar function. This function will use the inputs to define the shape of rebar and in this function the sketcher object will be added to the FreeCAD active document which will hold the profile of the rebar by calculating coordinates of vertices and drawing the shape of rebar from user inputs.
+\item \textbf{Phase I (The model layer):}\\Django provides an abstraction layer (the "models") for structuring and manipulating the data of your Web application. In this phase, I worked on data structures of thepoet.me.
 
-\item Then this sketcher object and the selected structural object will pass to the prebuilt function of FreeCAD which will create the rebar. Below is the detailed description of that function.
+\item \textbf{Phase II (The view layer)}:\\Django has the concept of “views” to encapsulate the logic responsible for processing a user’s request and for returning the response. In this phase I worked on the following things:
 
-\textit{makeRebar([baseobj,sketch,diameter,amount,offset,name]):} Adds a reinforcement bar object to the given structural object, using the given sketch as profile.
+\begin{itemize}
+\item \textbf{Writing views}: A view function, or view for short, is simply a Python function that takes a Web request and returns a Web response. This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image or anything, really. The view itself contains whatever arbitrary logic is necessary to return that response. This code can live anywhere you want, as long as it’s on your Python path. There’s no other requirement–no “magic,” so to speak. For the sake of putting the code somewhere, the convention is to put views in a file called views.py, placed in your project or application directory.
+\item \textbf{Mapping URLs to views:} So, to recap, this view function returns an HTML page that includes the current date and time. To display this view at a particular URL, you’ll need to create a URLconf; see URL dispatcher for instructions.
+\item \textbf{Returning errors:} Returning HTTP error codes in Django is easy. There are subclasses of HttpResponse for a number of common HTTP status codes other than 200 (which means “OK”). You can find the full list of available subclasses in the request/response documentation. Just return an instance of one of those subclasses instead of a normal HttpResponse in order to signify an error.
+\end{itemize}
 
-By following the above approach I can reuse the existing implementation of reinforcement system in the FreeCAD and at the same time proposing something new and interesting which will enrich user experience.
+\item \textbf{Last phase (The template layer):} In this last phase, I worked on look \& feel of the thepoet.me. The template layer provides a designer-friendly syntax for rendering the information to be presented to the user.
 
-\end{enumerate}
+\end{itemize}
 
 \section{Web pages in thepoet.me}
 \subsection{Website}

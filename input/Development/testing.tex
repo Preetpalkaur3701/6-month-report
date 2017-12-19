@@ -1,45 +1,28 @@
 \section{Testing}
+Software testing is a process of executing a program or application with the intent of finding the software bugs. It can also be stated as the process of validating and verifying that a software program or application or product: Meets the business and technical requirements that guided it's design and development.
 
-FreeCAD is the software used by many of people all over the world and many web services as backend. so, it has to be perfect, Robust, reliable and bug-free. So, A very strong test suite is developed for testing this software and any component or feature that is to be integrated into FreeCAD. And Rebar Addon was able to pass all the task before getting Integrated into FreeCAD.
-
-Test Suit for FreeCAD is developed using following two software:
+Test Suit for thepoet.me is developed using following two software:
 
 \begin{enumerate}
-    \item \textbf{AppVeyor:}AppVeyor is a hosted, distributed continuous integration service used to build and test projects hosted on GitHub on a Microsoft Windows virtual machine. AppVeyor is configured using a Web UI, or by adding a file named appveyor.yml, which is a YAML format text file, to the root directory of the code repository. Visual Studio Team Services (formerly Visual Studio Online) includes AppVeyor integration.
-    
-    \item \textbf{Travis CI:} Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted on GitHub.Open source projects may be tested at no charge via travis-ci.org. Private projects may be tested at the same location on a fee basis.
-    Travis CI is used mainly for Installation testing on different OS and It also perform  black box and regression testing on different operating systems.
-   
+    \item \textbf{dareboost:} One tool to test, analyze and monitor
+    speed and user experience of web pages. Figure \ref{dare}
+     \begin{figure}
+         \centering
+         \includegraphics[width=\linewidth]{images/dareboost.png}
+         \caption{Performance report by dareboost}
+         \label{dare}
+     \end{figure}
+
+    \item \textbf{SEO Tool:} A good search engine optimization strategy is based on careful planning, a lot of work and good choices made on key issues. Everything will get analyzed at the end of each month, when the time comes to send out monthly reports to your customers. Figure \ref{dare1}
+     \begin{figure}
+         \centering
+         \includegraphics[width=\linewidth]{images/seotool.png}
+         \caption{SEO report}
+         \label{dare1}
+     \end{figure}
+
 \end{enumerate}
 
-Test Suit developed for FreeCAD perform following type of testing:
- 
- \begin{enumerate}
-     \item \textbf{Installation Testing:} It is done by building the FreeCAD from scratch on totally fresh installation of different operating systems. Figure \ref{fig:travis} and \ref{appveyor} shows installation testing of FreeCAD
-   
-     \begin{figure}
-         \centering
-         \includegraphics[width=\linewidth]{images/travis.png}
-         \caption{Travis test summary for 3 different OS}
-         \label{fig:travis}
-     \end{figure}
-     \begin{figure}
-         \centering
-         \includegraphics[width=\linewidth]{images/appveyor.png}
-         \caption{AppVeyor test summary for Microsoft Windows virtual machine}
-         \label{appveyor}
-     \end{figure}
-   
-     \item \textbf{Regression Testing:} It is done by running the test cases developed for the OpenSCAD before the New changes are made to check whether new Changes doesn't produce abnormal behavior. Figure. \ref{regression}
-   
-     \begin{figure}
-         \centering
-         \includegraphics[width=\linewidth]{images/regression.png}
-         \caption{Unit testing}
-         \label{regression}
-     \end{figure}
-   
- \end{enumerate}
 
 
 %\begin{sidewaystable}
